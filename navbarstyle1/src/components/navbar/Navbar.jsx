@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
 import logo from '../../assets/logo.svg';
 import './navbar.css';
+import { Sidebar } from '../index';
 
 const Menu = () => (
     <>
@@ -12,16 +13,6 @@ const Menu = () => (
         <p><a href="#blog">Library</a></p>
     </>
 )
-
-// const subMenu = () => (
-//     <>
-//         <p><a href="#">Firefox</a></p>
-//         <p><a href="#">Chrome</a></p>
-//         <p><a href="#">Safari</a></p>
-//         <p><a href="#">Explorer</a></p>
-//         <p><a href="#">Micro</a></p>
-//     </>
-// )
 
 const Navbar = () => {
     const [toggleMenu, setToggleMenu] = useState(false);
@@ -45,15 +36,16 @@ const Navbar = () => {
                     : <RiMenu3Line color="#fff" size={27} onClick={() => setToggleMenu(true)} />
                 }
                 {toggleMenu && (
-                    <div className="project__navbar-menu_container scale-up-center">
-                        <div className="project__navbar-menu_container-links">
-                            <Menu />
-                            <div className="project__navbar-menu_container-links-sign">
-                                <p>Sign in</p>
-                                <button>Sign up</button>
-                            </div>
-                        </div>
-                    </div>
+                    <Sidebar />
+                    // <div className="project__navbar-menu_container scale-up-center">
+                        // <div className="project__navbar-menu_container-links">
+                            // <Menu />
+                            // <div className="project__navbar-menu_container-links-sign">
+                                // <p>Sign in</p>
+                                // <button>Sign up</button>
+                            // </div>
+                        // </div>
+                    // </div>
                 )}
             </div>
         </div>
