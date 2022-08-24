@@ -7,10 +7,10 @@ import { Sidebar } from '../index';
 const Menu = () => (
     <>
         <p><a href="#home">Home</a></p>
-        <p><a href="#about">About</a></p>
-        <p><a href="#possibility">Possibility</a></p>
         <p><a href="#features">Features</a></p>
-        <p><a href="#blog">Library</a></p>
+        <p><a href="#prices">Prices</a></p>
+        <p><a href="#contact">Contact us</a></p>
+        {/* <p><a href="#blog">Library</a></p> */}
     </>
 )
 
@@ -36,16 +36,16 @@ const Navbar = () => {
                     : <RiMenu3Line color="#fff" size={27} onClick={() => setToggleMenu(true)} />
                 }
                 {toggleMenu && (
-                    <Sidebar />
-                    // <div className="project__navbar-menu_container scale-up-center">
-                        // <div className="project__navbar-menu_container-links">
-                            // <Menu />
-                            // <div className="project__navbar-menu_container-links-sign">
-                                // <p>Sign in</p>
-                                // <button>Sign up</button>
-                            // </div>
-                        // </div>
-                    // </div>
+                    // <Sidebar />
+                     <div className="project__navbar-menu_container scale-up-center">
+                         <div className="project__navbar-menu_container-links">
+                             <Sidebar />
+                             {/* <div className="project__navbar-menu_container-links-sign">
+                                 <p>Sign in</p>
+                                 <button>Sign up</button>
+                             </div> */}
+                         </div>
+                     </div>
                 )}
             </div>
         </div>

@@ -4,7 +4,7 @@ import './sidebar.css';
 
 export default function Sidebar() {
     return (
-        <div className="sidebar">
+        <div className="project__sidebar">
             { items.map((item, index) => <SidebarItem key={index} item={item} />) }
         </div>
     )

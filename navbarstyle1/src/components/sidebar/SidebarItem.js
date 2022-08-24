@@ -1,27 +1,27 @@
 import { useState } from "react";
 
 export default function SidebarItem({item}){
-    const [open, setOpen] = useState(false)
+    const [toggleMenu, setToggleMenu] = useState(false)
 
     
     if(item.childrens){
         return (
-            <div className={open ? "sidebar-item open" : "sidebar-item"}>
-                <div className="sidebar-title">
+            <div className={toggleMenu ? "project__sidebar-item open" : "project__sidebar-item"}>
+                <div className="project__sidebar-title">
                     <span>
                         { item.icon && <i className={item.icon}></i> }
                         {item.title}    
                     </span> 
-                    <i className="bi-chevron-down toggle-btn" onClick={() => setOpen(!open)}></i>
+                    <i className="bi-chevron-down toggle-btn" onClick={() => setToggleMenu(!toggleMenu)}></i>
                 </div>
-                <div className="sidebar-content">
+                <div className="project__sidebar-content">
                     { item.childrens.map((child, index) => <SidebarItem key={index} item={child} />) }
                 </div>
             </div>
         )
     }else{
         return (
-            <a href={item.path || "#"} className="sidebar-item plain">
+            <a href={item.path || "#"} className="project__sidebar-item plain">
                 { item.icon && <i className={item.icon}></i> }
                 {item.title}
             </a>

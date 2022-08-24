@@ -1,0 +1,186 @@
+/* Main page/element */
+.project__prices {
+    display: flex;
+    padding: 4rem 6rem;
+    margin: 0;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+/* Container for title and subtext */
+.project__prices-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.project__prices-container_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.project__prices-container_text-title {
+    font-family: var(--font-family);
+    font-size: 1.5rem;
+    font-weight: 800;
+    line-height: 62px;
+    background: #b92b27;
+    background: -webkit-linear-gradient(to right, #b92b27, #1565c0);
+    background: linear-gradient(to right, #b92b27, #1565c0);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.project__prices-container_text-subtext {
+    font-family: var(--font-family);
+    font-size: 0.9rem;
+    font-weight: 500;
+    line-height: 25px;
+    color: #fff;
+    opacity: 0.95;
+}
+
+/* Container for boxes & Grid System*/
+.project__prices-content {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+/* Grid layout for boxes */
+.project__prices-content_boxes {
+    display: grid;
+    grid-template-columns: repeat(3, 270px);
+    gap: 10%;
+    justify-content: center;
+    align-items: flex-start;
+    height: auto;
+}
+
+/* Box General */
+.project__prices-content_boxes-container {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    padding: 25px;
+    background: #1a2a6c;
+    background: -webkit-linear-gradient(to right, #1a2a6c, #b21f1f);
+    background: linear-gradient(to right, #1a2a6c, #b21f1f);
+    box-shadow: 5px solid black;
+}
+
+/* Box Title and Icon */
+.project__prices-content_boxes-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project__prices-content_boxes-header-title {
+    font-family: var(--font-family);
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 25px;
+    color: #fff;
+}
+
+/* Box Price */
+.project__prices-content_boxes-price {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.project__prices-content_boxes-price h4 {
+    font-family: var(--font-family);
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 45px;
+    color: #fff;
+}
+
+.project__prices-content_boxes-price h4 span {
+    font-size: 1.2rem;
+    opacity: 0.6;
+}
+
+/* Box List */
+.project__prices-content_boxes-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project__prices-content_boxes-items {
+    list-style: none;
+}
+
+.project__prices-content_boxes-items li {
+    font-family: var(--font-family);
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: #fff;
+    line-height: 25px;
+    position: relative;
+}
+
+.project__prices-content_boxes-items li::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 5px;
+    left: -25px;
+    background: rgb(0, 255, 64);
+    border-radius: 25px;
+}
+
+.project__prices-content_boxes-items .red {
+    text-decoration: line-through;
+    opacity: 0.8;
+}
+
+.project__prices-content_boxes-items .red::before {
+    content: '';
+    background: rgb(255, 0, 64);
+}
+
+/* Box Button */
+.project__prices-content_boxes-button {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 1rem;
+}
+
+.project__prices-content_boxes-button button {
+    padding: 1rem;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+    background: var(--color-button);
+    cursor: pointer;
+}
+
+.project__prices-content_boxes-button button a {
+    font-family: var(--font-family);
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    opacity: 0.8;
+}

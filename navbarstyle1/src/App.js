@@ -1,5 +1,6 @@
 import './App.css';
 import { Navbar, Sidebar } from './components';
+import { Header, Features, Prices, Contact, Footer } from './containers';
 
 function App() {
   return (
@@ -7,7 +8,12 @@ function App() {
       <div className="gradient__bg">
         <Navbar />
         {/* <Sidebar /> */}
+        <Header />
       </div>
+      <Features />
+      <Prices />
+      <Contact />
+      <Footer />
     </div>
   );
 }
