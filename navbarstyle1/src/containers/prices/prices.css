@@ -209,3 +209,23 @@
         margin-top: 1rem;
     }
 }
+
+@media screen and (max-width: 700px) {
+    .project__prices {
+        padding: 2rem 1rem;
+    }
+
+    .project__prices-container_text-title {
+        text-align: center;
+    }
+
+    .project__prices-container_text-subtext {
+        text-align: center;
+    }
+
+    .project__prices-content_boxes {
+        display: grid;
+        grid-template-columns: repeat(1, 270px);
+        grid-template-rows: auto;
+    }
+}
