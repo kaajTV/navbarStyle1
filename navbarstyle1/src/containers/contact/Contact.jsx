@@ -54,13 +54,3 @@ const Contact = () => {
 }
 
 export default Contact
-
-// Contact Us
-// Send a question or give feedback
-// Textbox + submit button
-// We are also open for phone call from 8AM to 4PM
-// (phone number)
-// icons(fb, insta, twitter, email, phone number)
-
-// Partners
-// Bitcoin, osv

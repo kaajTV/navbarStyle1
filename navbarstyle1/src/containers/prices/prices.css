@@ -184,3 +184,28 @@
     text-decoration: none;
     opacity: 0.8;
 }
+
+@media screen and (max-width: 1050px) {
+    .project__prices {
+        padding: 2rem 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .project__prices-content {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .project__prices-content_boxes {
+        display: grid;
+        grid-template-columns: repeat(2, 270px);
+        grid-template-rows: auto;
+        row-gap: 3%;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .project__prices-container_text-subtext {
+        margin-top: 1rem;
+    }
+}

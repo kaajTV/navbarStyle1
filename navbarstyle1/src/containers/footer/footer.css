@@ -79,3 +79,9 @@
     color: #fff;
     opacity: 0.9;
 }
+
+@media screen and (max-width: 1050px) {
+    .project__footer-container {
+        padding: 4rem 2rem;
+    }
+}

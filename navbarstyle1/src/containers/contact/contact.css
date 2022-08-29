@@ -69,7 +69,7 @@
     color: #000;
     opacity: 0.9;
     width: 80%;
-    height: 150px;
+    height: 75px;
 }
 
 /* Type email & submit v1 */
@@ -179,4 +179,55 @@
 .project__contact-content_icons {
     display: flex;
     gap: 35px;
+}
+
+@media screen and (max-width: 1050px) {
+    .project__contact {
+        padding: 2rem 2rem;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .project__contact-container {
+        flex: 1;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .project__contact-container_info {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .project__contact-container_info-inputbox {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .project__contact-container_info-phone {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .project__contact-content {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-top: 2rem;
+    }
+
+    .project__contact-content_icons {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
 }
