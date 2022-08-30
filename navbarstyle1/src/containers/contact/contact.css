@@ -70,6 +70,14 @@
     opacity: 0.9;
     width: 80%;
     height: 75px;
+    padding: 0.2rem 0.5rem;
+}
+
+.project__contact-container_info-inputbox textarea:focus {
+    height: 100px;
+    outline: none;
+    border: none;
+    box-shadow: 0 0 5px black;
 }
 
 /* Type email & submit v1 */

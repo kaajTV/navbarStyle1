@@ -11,10 +11,10 @@ const Header = () => {
                         Buy Crypto With NFTs
                     </h1>
                     <p className="project__header-container_text-subtext">
-                    Ut scelerisque augue sit amet egestas mollis. Quisque dignissim, mi nec hendrerit efficitur, nisi arcu dignissim lorem, ac porttitor augue mi eu ligula. Nunc molestie eget sem ut porttitor. Ut interdum feugiat consequat. Quisque imperdiet cursus orci sit amet tristique. Nunc finibus finibus convallis. Maecenas tempor eleifend velit, non efficitur metus mattis eleifend. Vivamus quis neque id tellus sagittis ornare sit amet non sem. Proin a eros tortor. In porta consectetur libero, ut tempor ex tristique eget.
+                    Ut scelerisque augue sit amet egestas mollis. Quisque dignissim, mi nec hendrerit efficitur, nisi arcu dignissim lorem, ac porttitor augue mi eu ligula. Nunc molestie eget sem ut porttitor. Ut interdum feugiat consequat. Quisque imperdiet cursus orci sit amet tristique. Nunc finibus finibus convallis. Maecenas tempor eleifend velit, non efficitur metus mattis eleifend. Vivamus quis neque id tellus sagittis ornare sit amet non sem.
                     </p>
                     <p className="project__header-container_text-subtext">
-                    Ut scelerisque augue sit amet egestas mollis. Quisque dignissim, mi nec hendrerit efficitur, nisi arcu dignissim lorem, ac porttitor augue mi eu ligula. Nunc molestie eget sem ut porttitor. Ut interdum feugiat consequat. Quisque imperdiet cursus orci sit amet tristique. Nunc finibus finibus convallis. Maecenas tempor eleifend velit, non efficitur metus mattis eleifend. Vivamus quis neque id tellus sagittis ornare sit amet non sem.
+                    Ut scelerisque augue sit amet egestas mollis. Quisque dignissim, mi nec hendrerit efficitur, nisi arcu dignissim lorem, ac porttitor augue mi eu ligula. Nunc molestie eget sem ut porttitor. Ut interdum feugiat consequat. Quisque imperdiet cursus orci sit amet tristique. Nunc finibus finibus convallis. Maecenas tempor eleifend velit, non efficitur metus mattis eleifend.
                     </p>
                     <div className="project__header-container_button">
                         <button>

@@ -115,6 +115,12 @@
     }
 }
 
+@media screen and (max-width: 550px) {
+    .project__navbar-sign {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 500px) {
     .project__navbar {
         padding: 1rem;
