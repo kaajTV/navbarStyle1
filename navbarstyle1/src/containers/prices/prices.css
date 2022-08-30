@@ -216,10 +216,12 @@
     }
 
     .project__prices-container_text-title {
+        font-size: 1rem;
         text-align: center;
     }
 
     .project__prices-container_text-subtext {
+        font-size: 0.95rem;
         text-align: center;
     }
 

@@ -235,5 +235,28 @@
 @media screen and (max-width: 700px) {
     .project__contact {
         padding: 2rem 1rem;
-    }    
+    }
+
+    .project__contact-header h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .project__contact-container_info-inputbox label:first-of-type {
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+    .project__contact-container_info-phone p:first-of-type {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .project__contact-container_info-phone p:last-of-type {
+        margin-top: 0.5rem;
+    }
+
+    .project__contact-content_icons {
+        transform: scale(0.8);
+    }
 }

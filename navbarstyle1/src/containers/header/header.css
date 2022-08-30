@@ -141,7 +141,13 @@
         padding: 2rem 1rem;
     }
 
+    .project__header-container_text-title {
+        font-size: 2rem;
+        text-align: center;
+    }
+
     .project__header-container_text-subtext {
+        font-size: 0.95rem;
         text-align: center;
     }
 }

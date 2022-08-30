@@ -95,7 +95,29 @@
         padding: 2rem 1rem;
     }
 
+    .project__footer-container_content {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .project__footer-container_content-header h2 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .project__footer-container_content-items li {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
     .project__footer-end {
-        padding: 2rem 1rem 0rem 1rem;
+        padding: 2rem 1rem 0.5rem 1rem;
+    }
+
+    .project__footer-end_container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
     }
 }

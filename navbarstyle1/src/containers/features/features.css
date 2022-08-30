@@ -100,10 +100,12 @@
     }
 
     .project__features-container_text-title {
+        font-size: 1rem;
         text-align: center;
     }
 
     .project__features-container_text-subtext {
+        font-size: 0.95rem;
         text-align: center;
     }
 }
