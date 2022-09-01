@@ -6,12 +6,17 @@
             {
                 "title": "Home",
                 "icon": "bi-house-fill",
-                "path": "/"
+                "path": "/home"
             },
             {
-                "title": "About",
+                "title": "Features",
                 "icon": "bi-info-circle-fill",
-                "path": "/about"
+                "path": "/features"
+            },
+            {
+                "title": "Prices",
+                "icon": "bi-question-circle-fill",
+                "path": "/prices"
             },
             {
                 "title": "Contact",
@@ -30,10 +35,6 @@
                         "icon": "bi-instagram"
                     }
                 ]
-            },
-            {
-                "title": "FAQ",
-                "icon": "bi-question-circle-fill"
             }
         ]
     },

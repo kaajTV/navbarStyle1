@@ -11,4 +11,10 @@
   --color-text: #83acd5;
   --color-subtext: #ff7a5e;
   --color-button: #ff4820;
+
+  --color-light-hsl: 200, 100%, 91%;
+  --color-hsl: 200, 100%, 50%;
+  --color-dark-hsl: 200, 100%, 6%;
+  --color-success-hsl: 100, 60%, 50%;
+  --color-error-hsl: 0, 60%, 50%;
 }

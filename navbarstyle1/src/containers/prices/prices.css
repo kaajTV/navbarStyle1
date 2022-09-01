@@ -39,7 +39,7 @@
 
 .project__prices-container_text-subtext {
     font-family: var(--font-family);
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     font-weight: 500;
     line-height: 25px;
     color: #fff;
@@ -207,6 +207,7 @@
 
     .project__prices-container_text-subtext {
         margin-top: 1rem;
+        text-align: center;
     }
 }
 

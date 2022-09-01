@@ -123,6 +123,10 @@
         text-align: center;
     }
 
+    .project__header-container_text-subtext {
+        text-align: center;
+    }
+
     .project__header-container_text-subtext:first-of-type {
         margin-top: 1rem;
     }

@@ -85,6 +85,7 @@
     }
 
     .project__features-container_text-subtext {
+        text-align: center;
         display: flex;
         justify-content: flex-start;
         align-items: flex-start;

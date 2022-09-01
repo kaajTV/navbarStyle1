@@ -1,0 +1,91 @@
+.project__login {
+    background: hsl(var(--color-dark-hsl), .7);
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    border: none;
+    outline: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.project__login-form {
+    --color: hsl(var(--color-dark-hsl), .9);
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    width: 80%;
+    padding: 40px 30px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    box-shadow: 0 0 15px 0 var(--color);
+    background-color: var(--color);
+}
+
+.project__login-form_group {
+    display: flex;
+    flex-direction: column;
+}
+
+.project__login-form_group label {
+    font-family: var(--font-family);
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #fff;
+    line-height: 34px;
+}
+
+.project__login-form_group input {
+    padding: .5em;
+    font-family: var(--font-family);
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: .25em;
+    background-color: hsl(var(--color-light-hsl), .3);
+}
+
+.project__login-form_group.success input {
+    box-shadow: 0 0 0 1px hsl(var(--color-success-hsl));
+}
+
+.project__login-form_group.error input {
+    box-shadow: 0 0 0 1px hsl(var(--color-error-hsl));
+}
+
+.project__login-form_group input:focus {
+    box-shadow: 0 0 0 1px hsl(var(--color-hsl));
+}
+
+.project__login-form_group .msg {
+    display: none;
+    font-family: var(--font-family);
+    font-size: .75rem;
+}
+
+.project__login-form_group.success .msg {
+    color: hsl(var(--color-success-hsl));
+}
+
+.project__login-form_group.error .msg {
+    color: hsl(var(--color-error-hsl));
+}
+
+.project__login-form_group-inputhint {
+    font-family: var(--font-family);
+    font-size: .75rem;
+    font-weight: 300;
+    color: #fff;
+    opacity: .95;
+}

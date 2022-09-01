@@ -3,6 +3,7 @@ import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
 import logo from '../../assets/logo.svg';
 import './navbar.css';
 import { Sidebar } from '../index';
+import { Login } from '../../containers';
 
 const Menu = () => (
     <>
@@ -16,6 +17,7 @@ const Menu = () => (
 
 const Navbar = () => {
     const [toggleMenu, setToggleMenu] = useState(false);
+    const [toggleLogin, setToggleLogin] = useState(false);
     return (
         <div className="project__navbar">
             <div className="project__navbar-links">
@@ -27,7 +29,14 @@ const Navbar = () => {
                 </div>
             </div>
             <div className="project__navbar-sign">
-                <p>Sign in</p>
+                {toggleLogin
+                    ? <RiCloseLine color="#fff" size={35}  onClick={() => setToggleLogin(false)} />
+                    : <p onClick={() => setToggleLogin(true)}>Sign in</p>
+                }
+                {toggleLogin && (
+                    <Login />
+                )}
+                {/* <p>Sign in</p> */}
                 <button>Sign up</button>
             </div>
             <div className="project__navbar-menu">
