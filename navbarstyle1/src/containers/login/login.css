@@ -9,7 +9,8 @@
     left: 0;
     right: 0;
     bottom: 0;
-    width: 100vw;
+    max-width: 100vw;
+    width: 100%;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -34,6 +35,7 @@
 .project__login-form_group {
     display: flex;
     flex-direction: column;
+    gap: 7px;
 }
 
 .project__login-form_group label {
@@ -56,11 +58,11 @@
     background-color: hsl(var(--color-light-hsl), .3);
 }
 
-.project__login-form_group.success input {
+.project__login-form_group input:valid:required {
     box-shadow: 0 0 0 1px hsl(var(--color-success-hsl));
 }
 
-.project__login-form_group.error input {
+.project__login-form_group input:invalid:required {
     box-shadow: 0 0 0 1px hsl(var(--color-error-hsl));
 }
 
@@ -74,11 +76,13 @@
     font-size: .75rem;
 }
 
-.project__login-form_group.success .msg {
+.project__login-form_group input:valid + span.msg {
+    display: block;
     color: hsl(var(--color-success-hsl));
 }
 
-.project__login-form_group.error .msg {
+.project__login-form_group input:invalid + span.msg {
+    display: block;
     color: hsl(var(--color-error-hsl));
 }
 
@@ -88,4 +92,11 @@
     font-weight: 300;
     color: #fff;
     opacity: .95;
+}
+
+.project__navbar-sign svg {
+    position: relative;
+    /* top: 31.5vh; */
+    /* left: 67vw; */
+    z-index: 9999;
 }
