@@ -99,13 +99,6 @@
     display: none;
 }
 
-/* .project__navbar-sign svg {
-    position: absolute;
-    top: 31.5vh;
-    left: 67vw;
-    z-index: 9999;
-} */
-
 @media screen and (max-width: 1050px) {
     .project__navbar-links_container {
         display: none;
