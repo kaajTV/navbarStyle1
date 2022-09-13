@@ -4,6 +4,7 @@ import logo from '../../assets/logo.svg';
 import './navbar.css';
 import { Sidebar } from '../index';
 import { Login } from '../../containers';
+import { Registration } from '../../containers';
 
 const Menu = () => (
     <>
@@ -15,12 +16,17 @@ const Menu = () => (
     </>
 )
 
+
+
 const Navbar = () => {
     const [toggleMenu, setToggleMenu] = useState(false);
     const [toggleLogin, setToggleLogin] = useState(false);
+    const [toggleRegistration, setToggleRegistration] = useState(false);
     const [errorMessages, setErrorMessages] = useState({});
     const [isSubmitted, setIsSubmitted] = useState(false);
 
+
+    // DataBase
     const database = [
         {
             username: "username1",
@@ -32,11 +38,13 @@ const Navbar = () => {
         }
     ];
 
+    // Error Text
     const errors = {
         uname: "invalid username",
         pass: "invalid password"
     };
 
+    // Find UserData
     const handleSubmit = (event) => {
         event.preventDefault();
 
@@ -55,6 +63,8 @@ const Navbar = () => {
         }
     };
 
+    // Rendering Error Messages
+
     const renderErrorMessage = (name) =>
         name === errorMessages.name && (
             <div className="error">{errorMessages.message}</div>
@@ -63,13 +73,19 @@ const Navbar = () => {
     return (
         <div className="project__navbar">
             <div className="project__navbar-links">
+
+                {/* Logo */}
                 <div className="project__navbar-links_logo">
                     <img src={logo} alt="logo" />
                 </div>
+
+                {/* Menu Context */}
                 <div className="project__navbar-links_container">
                     <Menu />
                 </div>
             </div>
+
+            {/* Login & SignUp */}
             <div className="project__navbar-sign">
                 {toggleLogin
                     ? <p onClick={() => setToggleLogin(false)}>Sign in</p>
@@ -107,8 +123,16 @@ const Navbar = () => {
                         {/* {isSubmitted ? toggleLogin : toggleLogin} */}
                     </div>
                 )}
-                <button>Sign up</button>
+                {toggleRegistration
+                    ? <button onClick={() => setToggleRegistration(false)}>Sign up</button>
+                    : <button onClick={() => setToggleRegistration(true)}>Sign up</button>
+                }
+                {toggleRegistration && (
+                    <Registration />
+                )}
             </div>
+
+            {/* Sidebar Menu */}
             <div className="project__navbar-menu">
                 {toggleMenu
                     ? <RiCloseLine color="#fff" size={27} onClick={() => setToggleMenu(false)} />

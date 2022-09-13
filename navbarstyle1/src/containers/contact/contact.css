@@ -68,6 +68,7 @@
     line-height: 25px;
     color: #000;
     opacity: 0.9;
+    max-width: 80%;
     width: 80%;
     height: 75px;
     padding: 0.2rem 0.5rem;
