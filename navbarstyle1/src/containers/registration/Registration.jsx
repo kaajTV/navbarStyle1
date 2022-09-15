@@ -1,65 +1,45 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { Link, useNavigate } from 'react-router-dom';
 import './registration.css';
-import { database } from '../../firebase';
-import { ref, push, child, update } from 'firebase/database';
+import {
+    auth,
+    registerWithEmailAndPassword
+} from '../../firebase';
 
 function Registration() {
-
-    const [userName, setUserName] = useState(null);
-    const [email, setEmail] = useState(null);
-    const [password, setPassword] = useState(null);
-    const [confirmPassword, setConfirmPassword] = useState(null);
-
-    const handleInputChange = (e) => {
-        const { id, value } = e.target;
-        if (id === "userName") {
-            setUserName(value);
-        }
-        if (id === "email") {
-            setEmail(value);
-        }
-        if (id === "password") {
-            setPassword(value);
-        }
-        if (id === "confirmPassword") {
-            setConfirmPassword(value);
-        }
-    }
-
-    const handleSubmit = () => {
-        let obj = {
-            userName : userName,
-            email : email,
-            password : password,
-            confirmPassword : confirmPassword,
-        }
-        const newPostKey = push(child(ref(database), 'posts')).key;
-        const updates = {};
-        updates['/' + newPostKey] = obj;
-        return update(ref(database), updates);
-    }
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [name, setName] = useState("");
+    const [user, loading, error] = useAuthState(auth);
+    const navigate = useNavigate();
+    const register = () => {
+        if (!name) alert("Please enter name");
+        registerWithEmailAndPassword(name, email, password);
+    };
+    useEffect(() => {
+        if (loading) return;
+        if (user) navigate.replace("/dashboard");
+    }, [user, loading]);
 
     return (
         <div className="project__registration">
             <form action="" className="project__registration-form">
                 <div className="project__registration-form_group">
-                    <label htmlFor="userName" className="form__label">Username</label>
-                    <input type="text" name="userName" id="userName" className="form__input" value={userName} onChange={(e) => handleInputChange(e)} />
+                    <label htmlFor="name" className="form__label">Full Name</label>
+                    <input type="text" name="name" id="name" className="form__input" value={name} onChange={(e) => setName(e.target.value)} />
                 </div>
                 <div className="project__registration-form_group">
                     <label htmlFor="email" className="form__label">Email</label>
-                    <input type="email" name="email" id="email" className="form__input" value={email} onChange={(e) => handleInputChange(e)} />
+                    <input type="email" name="email" id="email" className="form__input" value={email} onChange={(e) => setEmail(e.target.value)} />
                 </div>
                 <div className="project__registration-form_group">
                     <label htmlFor="password" className="form__label">Password</label>
-                    <input type="password" name="password" id="password" className="form__input" value={password} onChange={(e) => handleInputChange(e)} />
+                    <input type="password" name="password" id="password" className="form__input" value={password} onChange={(e) => setPassword(e.target.value)} />
                 </div>
+                <input type="submit" value="Register" className="form__submit" onClick={register} />
                 <div className="project__registration-form_group">
-                    <label htmlFor="confirmPassword" className="form__label">Confirm Password</label>
-                    <input type="password" name="confirmPassword" id="confirmPassword" className="form__input" value={confirmPassword} onChange={(e) => handleInputChange(e)} />
-                </div>
-                <div className="project__registration-form_register">
-                    <input type="submit" value="Register" className="form__register" onClick={() => handleSubmit()} />
+                    Already have an account? <Link to="/">Login</Link> now.
                 </div>
             </form>
         </div>

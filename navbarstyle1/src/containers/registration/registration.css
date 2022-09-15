@@ -81,3 +81,29 @@
     outline: none;
     cursor: pointer;
 }
+
+.project__registration-form_close {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.project__registration-form_close svg {
+    cursor: pointer;
+}
+
+.project__registration-overlay {
+    background: hsl(var(--color-dark-hsl), .7);
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    border: none;
+    outline: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: 100vw;
+    width: 100%;
+    height: 100vh;
+    z-index: 998;
+}
